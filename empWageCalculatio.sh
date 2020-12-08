@@ -29,3 +29,17 @@ else
 fi
 }
 DailyEmpWage
+
+#UC3
+function PartTimeEmpWage()
+{
+PART_TIME_HR=8
+if [ $empAttendance -eq 0 ]
+then
+	echo "Part Time Employee Wage is: 0"
+else
+	partTimeEmpWage=$(($WAGE_PER_HR*$PART_TIME_HR))
+	echo "Part Time Employee Wage is: $dailyEmpWage"
+fi
+}
+PartTimeEmpWage
